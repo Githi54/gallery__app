@@ -23,7 +23,6 @@ export function App() {
   const [isClicked, setIsClicked] = useState(false);
 
   const loadPhoto = useCallback(async () => {
-    setImages([]);
     setIsClicked(true);
 
     const data = await fetchApi();
