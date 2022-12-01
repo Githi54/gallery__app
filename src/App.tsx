@@ -32,7 +32,7 @@ export function App() {
   }, [])
 
   return (
-    <div className="container">
+    <div className="container mt-2">
       <div className="container">
         <button className="btn btn-primary btn-md" onClick={loadPhoto}>
           Load photo
