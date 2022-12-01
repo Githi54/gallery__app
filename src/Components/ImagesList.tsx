@@ -14,12 +14,9 @@ export const ImagesList: React.FC<Props> = ({ images }) => {
       elementClassNames="custom-wrapper-class"
       plugins={[lgZoom]}
     >
-      {images.map(image => {
-
-        return (
-          <IndividualImage key={image.id} image={image} images={images} />
-        )
-      })}
+      {images.map(image => (
+        <IndividualImage key={image.id} image={image} />
+      ))}
     </LightGallery>
   );
 };
