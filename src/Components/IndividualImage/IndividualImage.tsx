@@ -7,7 +7,7 @@ type Props = {
 export const IndividualImage: React.FC<Props> = ({ image }) => {
   return (
       <a href={image.urls.small}>
-        <img src={`${image.urls.small}`} alt={`${image.user.name}`} className="unsplash_img" />
+        <img src={`${image.urls.small}`} alt={`${image.user.name}`} className='w-100 shadow-1-strong rounded mb-4' />
       </a>
   );
 };

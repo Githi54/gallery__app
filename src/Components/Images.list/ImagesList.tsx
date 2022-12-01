@@ -10,13 +10,12 @@ type Props = {
 
 export const ImagesList: React.FC<Props> = ({ images }) => {
   return (
-    <LightGallery
-      elementClassNames="custom-wrapper-class"
-      plugins={[lgZoom]}
-    >
-      {images.map(image => (
-        <IndividualImage key={image.id} image={image} />
-      ))}
-    </LightGallery>
+      <LightGallery
+        plugins={[lgZoom]}
+      >
+        {images.map(image => (
+          <IndividualImage key={image.id} image={image} />
+        ))}
+      </LightGallery>
   );
 };
