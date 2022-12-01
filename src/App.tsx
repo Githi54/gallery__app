@@ -4,6 +4,12 @@ import { ImagesList } from "./Components/ImagesList";
 import { IMG } from "./types/Image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+
+
 export function App() {
   const [images, setImages] = useState<IMG[]>([]);
 
@@ -14,15 +20,22 @@ export function App() {
   }, [])
 
   return (
+    // <div className="container">
+    //   <br />
+    //   <button className="btn btn-primary btn-md" onClick={loadPhoto}>Load photo</button>
+    //   <br /><br />
+    //   <div className="photos">
+    //   {images.length > 0 && (
+    //   <ImagesList images={images} />
+    // )}
+    //   </div>
+    // </div>
     <div className="container">
-      <br />
       <button className="btn btn-primary btn-md" onClick={loadPhoto}>Load photo</button>
       <br /><br />
-      <div className="photos">
       {images.length > 0 && (
-      <ImagesList images={images} />
-    )}
-      </div>
+        <ImagesList images={images} />
+      )}
     </div>
   );
 }
