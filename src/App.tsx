@@ -1,23 +1,28 @@
 import { useCallback, useState } from "react";
 import { fetchApi } from "./api/api";
-import { Image } from "./types/Image";
+import { ImagesList } from "./Components/ImagesList";
+import { IMG } from "./types/Image";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function App() {
-  const [images, setImages] = useState<Image[]>([]);
+  const [images, setImages] = useState<IMG[]>([]);
 
   const loadPhoto = useCallback(async () => {
     const data = await fetchApi();
 
-    setImages(data.slice(0, 5));
+    setImages(data);
   }, [])
 
   return (
-    <>
-    <h1>Hello world!</h1>
-    <button onClick={loadPhoto}>Load photo</button>
-    {images.length > 0 && images.map(image => (
-      <img src={image.urls.small} alt="dfa" />
-    ))}
-    </>
+    <div className="container">
+      <br />
+      <button className="btn btn-primary btn-md" onClick={loadPhoto}>Load photo</button>
+      <br /><br />
+      <div className="photos">
+      {images.length > 0 && (
+      <ImagesList images={images} />
+    )}
+      </div>
+    </div>
   );
 }
