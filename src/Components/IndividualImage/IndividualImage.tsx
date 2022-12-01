@@ -1,4 +1,4 @@
-import { IMG } from "../types/Image";
+import { IMG } from "../../types/Image";
 
 type Props = {
   image: IMG;
@@ -7,7 +7,7 @@ type Props = {
 export const IndividualImage: React.FC<Props> = ({ image }) => {
   return (
       <a href={image.urls.small}>
-        <img src={`${image.urls.small}`} alt={`${image.user.name}`} />
+        <img src={`${image.urls.small}`} alt={`${image.user.name}`} className="unsplash_img" />
       </a>
   );
 };

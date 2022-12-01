@@ -1,5 +1,5 @@
-import { IMG } from "../types/Image";
-import { IndividualImage } from "./IndividualImage";
+import { IMG } from "../../types/Image";
+import { IndividualImage } from "../IndividualImage/IndividualImage";
 import LightGallery from 'lightgallery/react';
 
 import lgZoom from 'lightgallery/plugins/zoom';

@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { fetchApi } from "./api/api";
-import { ImagesList } from "./Components/ImagesList";
+import { ImagesList } from "./Components/Images.list/ImagesList";
 import { IMG } from "./types/Image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
