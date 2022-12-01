@@ -33,7 +33,7 @@ export function App() {
 
   return (
     <div className="container">
-      <div className="container mt-2">
+      <div className="container">
         <button className="btn btn-primary btn-md" onClick={loadPhoto}>
           Load photo
         </button>
@@ -58,7 +58,10 @@ export function App() {
                 <ImagesList images={images.slice(2, 4)} />
               </MDBCol>
 
-              <MDBCol lg={4} className='mb-4 mb-lg-0'>
+              <MDBCol 
+                lg={4} 
+                className='mb-4 mb-lg-0'
+              >
                 <ImagesList images={images.slice(4)} />
               </MDBCol>
             </MDBRow>
