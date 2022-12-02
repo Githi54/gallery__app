@@ -21,8 +21,8 @@ export function App() {
 
     const data = await fetchApi();
 
-    setImages(data.slice(0, 6));
-  }, [])
+    setImages(data);
+  }, []);
 
   return (
     <div className="container mt-2">
@@ -33,7 +33,7 @@ export function App() {
           <Loader />
         )
         : (
-          <PhotoGallery images={images} />
+          <PhotoGallery images={images.slice(0, 6)} />
         )}
     </div>
   );
