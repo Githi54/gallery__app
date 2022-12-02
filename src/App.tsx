@@ -33,7 +33,14 @@ export function App() {
   return (
     <div className="container mt-2">
       <div className="container">
-        <button className="btn btn-primary btn-md" onClick={loadPhoto}>
+        <button 
+          className="
+            btn 
+            btn-primary 
+            btn-md" 
+          onClick={loadPhoto}
+          hidden={images.length > 0}
+        >
           Load photo
         </button>
       </div>

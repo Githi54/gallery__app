@@ -14,7 +14,8 @@ export const IndividualImage: React.FC<Props> = ({ image }) => {
             w-100 
             shadow-1-strong
             rounded
-            mb-4' 
+            mb-4
+          ' 
         />
       </a>
   );
